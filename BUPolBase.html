@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css_final2.css">
+    <script src="filter.js"></script>
+    <!-- <link rel="stylesheet" href="css-1.css"> -->
+    <title>Fixed table</title>
+</head>
+
+<body>
+    <div class="outer-wrapper">
+    <div class="table-wrapper">
+    <table id="emp-table">
+        <thead>
+            <th col-index = 1>Boarding House Name</th>
+            <th col-index = 2>Occupants
+                <select class="table-filter" onchange="filter_rows()">
+                    <option value="all"></option>
+                </select>
+            </th>
+            <th col-index = 3>Price
+                <select class="table-filter" onchange="filter_rows()">
+                    <option value="all"></option>
+                </select>
+            </th>
+            <th col-index = 4>Distance
+                <select class="table-filter" onchange="filter_rows()">
+                    <option value="all"></option>
+                </select>
+            </th>
+            
+        </thead>
+        <tbody>
+            <tr>
+                <td>Styler's Dormitory</td>
+                <td>3-4</td>
+                <td>1001-2000</td>
+                <td>30-39</td>
+            </tr>
+            <tr>
+                <td>Estiller</td>
+                <td>5-6</td>
+                <td>1001-2000</td>
+                <td>10-19</td>
+            </tr>
+            <tr>
+                <td>Emmaculate</td>
+                <td>3-4</td>
+                <td>1001-2000</td>
+                <td>20-29</td>
+            </tr>
+            <tr>
+                <td>Aurora Manor</td>
+                <td>5-6</td>
+                <td>500-1000</td>
+                <td>50+</td>
+            </tr>
+            <tr>
+                <td>Meadow Lane Lodge</td>
+                <td>1-2</td>
+                <td>4001+</td>
+                <td>20-29</td>
+            </tr>
+
+        </tbody>
+    </table>
+    <!-- <script>getUniqueValuesFromColumn()
+    </script> -->
+    <script>
+        window.onload = () => {
+            console.log(document.querySelector("#emp-table > tbody > tr:nth-child(1) > td:nth-child(2) ").innerHTML);
+        };
+
+        getUniqueValuesFromColumn();
+        
+    </script>
+</div>
+</div>
+</body>
+
+</html>
